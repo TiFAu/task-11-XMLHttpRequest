@@ -1,0 +1,21 @@
+<p>Привет, студент!</p>
+
+<p>Сегодня мы изучаем <b>XMLHttpRequest</b></p>
+
+<p>Код, с помощью которого ты загрузил это сообщение:</p>
+
+<pre>
+
+var request = new XMLHttpRequest ()
+
+request.onreadystatechange = function () {
+    if ( this.readyState === 4 ) {
+        if ( this.status === 200 ) 
+          document.body.innerHTML += this.responseText
+    }
+}
+
+request.open ( "GET", "message.txt")
+request.send ()
+
+</pre>
