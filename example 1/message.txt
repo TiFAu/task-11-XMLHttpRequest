@@ -1,0 +1,22 @@
+<p>Привет, студент!</p>
+
+<p>Сегодня мы изучаем <b>XMLHttpRequest</b></p>
+
+<p>Код, с помощью которого ты загрузил это сообщение:</p>
+
+<pre>
+
+var request = new XMLHttpRequest ()
+
+function getFileFromServer ( url ) {
+    var request = new XMLHttpRequest ()
+
+    request.onload = function () {
+        document.body.innerHTML += this.responseText
+    }
+    request.onerror = function ( err ) {
+        document.body.innerHTML += err.message
+    }
+}
+
+</pre>
